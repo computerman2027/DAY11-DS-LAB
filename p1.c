@@ -50,11 +50,11 @@ int main()
         printf("INVALID INPUT\n");
         return 0;
     }
-    int array[n];
+    int *array=(int*)malloc(n*sizeof(int));
     printf("ENTER ELEMENTS OF ARRAY\n");
     for (i = 0; i < n; i++)
         scanf("%d", &array[i]);
-    printf("DISPLAYING ELEMENTS OF ARRAY");
+    printf("DISPLAYING ELEMENTS OF ARRAY\n"); 
     for (i = 0; i < n; i++)
         printf(i==n-1?"%d\n":"%d, ", array[i]);
     quickSort(array, 0, n - 1);
