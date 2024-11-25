@@ -14,7 +14,7 @@ int partition(int arr[], int first, int last)
 	int down=first;
 	while(down<up)
 	{
-		while(arr[down]<pivot && down<up)
+		while(arr[down]<=pivot && down<up)
 		{
 			down++;
 		}
@@ -27,7 +27,7 @@ int partition(int arr[], int first, int last)
 			swap(&arr[down],&arr[up]);
 		}
 	}
-	arr[up]=pivot;
+	swap(&arr[first],&arr[up]);
 	return up;	
 }
 
